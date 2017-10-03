@@ -1,0 +1,61 @@
+{
+  "name": "HeaderedTabScrollView",
+  "version": "0.1.0",
+  "summary": "A swift View-Controller managing a scrollable tab-based menu above a header.",
+  "description": "A swift View-Controller managing a scrollable tab-based menu above a header. It can be used as a starting template for any view composed of a main header and several subpages.",
+  "homepage": "https://github.com/tsucres/HeaderedTabScrollView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Stéphane Sercu": "stefsercu@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/tsucres/HeaderedTabScrollView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "default_subspecs": "Both",
+  "frameworks": "UIKit",
+  "subspecs": [
+    {
+      "name": "Base",
+      "source_files": "HeaderedTabScrollView/Classes/AbstractHeaderedTabScrollViewController.swift"
+    },
+    {
+      "name": "Both",
+      "dependencies": {
+        "HeaderedTabScrollView/Base": [
+
+        ],
+        "HeaderedTabScrollView/PageMenu": [
+
+        ],
+        "HeaderedTabScrollView/ACTabScrollView": [
+
+        ]
+      }
+    },
+    {
+      "name": "PageMenu",
+      "dependencies": {
+        "PageMenu": [
+          "~> 2.0.0"
+        ]
+      },
+      "source_files": "HeaderedTabScrollView/Classes/HeaderedCAPSPageMenuViewController.swift"
+    },
+    {
+      "name": "ACTabScrollView",
+      "dependencies": {
+        "ACTabScrollView": [
+          "~> 0.3.0"
+        ]
+      },
+      "source_files": "HeaderedTabScrollView/Classes/HeaderedACTabScrollViewController.swift"
+    }
+  ]
+}

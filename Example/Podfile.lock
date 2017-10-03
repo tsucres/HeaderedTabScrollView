@@ -1,0 +1,28 @@
+PODS:
+  - ACTabScrollView (0.3.0)
+  - HeaderedTabScrollView/ACTabScrollView (0.1.0):
+    - ACTabScrollView (~> 0.3.0)
+  - HeaderedTabScrollView/Base (0.1.0)
+  - HeaderedTabScrollView/Both (0.1.0):
+    - HeaderedTabScrollView/ACTabScrollView
+    - HeaderedTabScrollView/Base
+    - HeaderedTabScrollView/PageMenu
+  - HeaderedTabScrollView/PageMenu (0.1.0):
+    - PageMenu (~> 2.0.0)
+  - PageMenu (2.0.0)
+
+DEPENDENCIES:
+  - HeaderedTabScrollView/Both (from `../`)
+
+EXTERNAL SOURCES:
+  HeaderedTabScrollView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ACTabScrollView: c24a83d10a6db5797392627a5eace49480b0d534
+  HeaderedTabScrollView: bfdd96201805b2f76e197e1323222afef0b3bb02
+  PageMenu: 9c38fd7e0d9ef4b1408320f55bb907bbc0e538dc
+
+PODFILE CHECKSUM: 424ba292c910c5cb210821803980deba46f500a0
+
+COCOAPODS: 1.3.1

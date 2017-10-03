@@ -1,42 +1,49 @@
 #
-# Be sure to run `pod lib lint HeaderedTabScrollView.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
+# `pod lib lint HeaderedTabScrollView.podspec'
 
 Pod::Spec.new do |s|
   s.name             = 'HeaderedTabScrollView'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of HeaderedTabScrollView.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.summary          = 'A swift View-Controller managing a scrollable tab-based menu above a header.'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+A swift View-Controller managing a scrollable tab-based menu above a header. It can be used as a starting template for any view composed of a main header and several subpages.
                        DESC
 
   s.homepage         = 'https://github.com/tsucres/HeaderedTabScrollView'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'tsucres' => 'stefsercu@gmail.com' }
+  s.author           = { 'Stéphane Sercu' => 'stefsercu@gmail.com' }
   s.source           = { :git => 'https://github.com/tsucres/HeaderedTabScrollView.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
-  s.source_files = 'HeaderedTabScrollView/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'HeaderedTabScrollView' => ['HeaderedTabScrollView/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.default_subspec = 'Both'
+
+  s.subspec 'Base' do |base|
+    base.source_files = 'HeaderedTabScrollView/Classes/AbstractHeaderedTabScrollViewController.swift'
+
+  end
+
+  s.subspec 'Both' do |both|
+    both.dependency 'HeaderedTabScrollView/Base'
+    both.dependency 'HeaderedTabScrollView/PageMenu'
+    both.dependency 'HeaderedTabScrollView/ACTabScrollView'
+  end
+
+
+  s.subspec 'PageMenu' do |pagemenu|
+    pagemenu.dependency 'PageMenu', '~> 2.0.0'
+    pagemenu.source_files = 'HeaderedTabScrollView/Classes/HeaderedCAPSPageMenuViewController.swift'
+  end
+
+  s.subspec 'ACTabScrollView' do |actabscrollview|
+    actabscrollview.dependency 'ACTabScrollView', '~> 0.3.0'
+    actabscrollview.source_files = 'HeaderedTabScrollView/Classes/HeaderedACTabScrollViewController.swift'
+  end
+
+  s.frameworks = 'UIKit'
+
+
 end

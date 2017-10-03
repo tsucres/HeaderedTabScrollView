@@ -1,11 +1,5 @@
 use_frameworks!
 
 target 'HeaderedTabScrollView_Example' do
-  pod 'HeaderedTabScrollView', :path => '../'
-
-  target 'HeaderedTabScrollView_Tests' do
-    inherit! :search_paths
-
-    
-  end
+  pod 'HeaderedTabScrollView/Both', :path => '../'
 end

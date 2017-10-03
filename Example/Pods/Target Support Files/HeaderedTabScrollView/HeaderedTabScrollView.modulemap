@@ -1,0 +1,6 @@
+framework module HeaderedTabScrollView {
+  umbrella header "HeaderedTabScrollView-umbrella.h"
+
+  export *
+  module * { export * }
+}
