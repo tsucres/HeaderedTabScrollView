@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import HeaderedTabScrollView
+
 /// ViewController for a scrollable view intented to be used a as subpage of a HeaderedTabScrollView
 class PlaceholderViewController: UIViewController, UITextViewDelegate {
     var placeholderContent: String = "" {
@@ -40,6 +42,7 @@ class PlaceholderViewController: UIViewController, UITextViewDelegate {
     }
     var scrollDelegateFunc: ((UIScrollView)->Void)?
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        //parentHeaderedTabScrollViewController?.pleaseScroll(scrollView)
         if self.scrollDelegateFunc != nil {
             self.scrollDelegateFunc!(scrollView)
         }

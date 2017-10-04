@@ -30,7 +30,7 @@ class CustomAnimationViewController: HeaderedCAPSPageMenuViewController, CAPSPag
             
             addChildViewController(vc)
             subPageControllers.append(vc)
-            vc.scrollDelegateFunc = self.pleaseScroll
+            vc.scrollDelegateFunc = { [weak self] in self?.pleaseScroll($0) }
         }
         
         let parameters: [CAPSPageMenuOption] = [

@@ -105,9 +105,8 @@ open class AbstractHeaderedTabScrollViewController: UIViewController {
     }
     
     
-    /**
-     The color of the items in the navigation bar (if any)
-     */
+    
+    /// The color of the items in the navigation bar (if any)
     public var navBarItemsColor: UIColor = .white {
         didSet {
             if let navCtrl = self.navigationController {
@@ -116,6 +115,7 @@ open class AbstractHeaderedTabScrollViewController: UIViewController {
         }
     }
     
+    /// Color of the title in the navigation bar
     public var navBarTitleColor: UIColor = .white {
         didSet {
             if let navCtrl = self.navigationController {

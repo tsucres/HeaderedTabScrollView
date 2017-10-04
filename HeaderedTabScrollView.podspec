@@ -11,7 +11,7 @@ A swift View-Controller managing a scrollable tab-based menu above a header. It 
                        DESC
 
   s.homepage         = 'https://github.com/tsucres/HeaderedTabScrollView'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshots      = 'https://github.com/tsucres/HeaderedTabScrollView/raw/master/Screenshots/presentationImg.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Stéphane Sercu' => 'stefsercu@gmail.com' }
   s.source           = { :git => 'https://github.com/tsucres/HeaderedTabScrollView.git', :tag => s.version.to_s }

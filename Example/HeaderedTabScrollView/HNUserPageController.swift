@@ -29,13 +29,14 @@ class HNUserPageController: HeaderedCAPSPageMenuViewController, CAPSPageMenuDele
         
         self.headerView = head
         
+        
         var controllers: [UIViewController] = []
         for i in 0 ..< tabsTexts.count {
             let vc = PlaceholderViewController()
             vc.placeholderContent = MockupData.subpagesContent[i]
             vc.contentText.backgroundColor = #colorLiteral(red: 0.07159858197, green: 0.09406698495, blue: 0.1027848646, alpha: 1)
             vc.contentText.textColor = .white
-            vc.scrollDelegateFunc = self.pleaseScroll
+            vc.scrollDelegateFunc = { [weak self] in self?.pleaseScroll($0) }
             
             vc.title = tabsTexts[i]
             controllers.append(vc)

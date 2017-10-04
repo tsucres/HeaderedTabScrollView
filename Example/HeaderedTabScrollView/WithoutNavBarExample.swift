@@ -27,7 +27,7 @@ class WithoutNavBarExampleController: HeaderedACTabScrollViewController, ACTabSc
             let vc = PlaceholderViewController()
             vc.placeholderContent = MockupData.subpagesContent[i]
             self.addSubPage(vc: vc)
-            vc.scrollDelegateFunc = self.pleaseScroll
+            vc.scrollDelegateFunc = { [weak self] in self?.pleaseScroll($0) }
         }
         
     }
