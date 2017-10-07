@@ -92,14 +92,14 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				974126F61F82477B00362AE5 /* BasicHeaderedACTabScrollViewController.swift */,
 				974127031F8248EC00362AE5 /* AllInOneDemoWithNavController.swift */,
-				974126ED1F82477900362AE5 /* BasicHeaderedCAPSPageMenuViewController.swift */,
-				97E39DA31F83FA3000065863 /* CustomAnimationViewController.swift */,
+				974126F01F82477A00362AE5 /* PlaceholderScrollableViewController.swift */,
+				97E73B571F893932009A9A26 /* Basic ACTabScrollView */,
+				97E73B591F893953009A9A26 /* No Navbar example */,
+				97E73B561F893927009A9A26 /* Basic PageMenu */,
+				97E73B581F893946009A9A26 /* Custom Animation */,
 				974127021F8247C300362AE5 /* HaDExample */,
 				974127011F8247AE00362AE5 /* HNExample */,
-				974126F01F82477A00362AE5 /* PlaceholderScrollableViewController.swift */,
-				974126F21F82477A00362AE5 /* WithoutNavBarExample.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -152,6 +152,38 @@
 				974126F41F82477A00362AE5 /* StatView.swift */,
 			);
 			name = HaDExample;
+			sourceTree = "<group>";
+		};
+		97E73B561F893927009A9A26 /* Basic PageMenu */ = {
+			isa = PBXGroup;
+			children = (
+				974126ED1F82477900362AE5 /* BasicHeaderedCAPSPageMenuViewController.swift */,
+			);
+			name = "Basic PageMenu";
+			sourceTree = "<group>";
+		};
+		97E73B571F893932009A9A26 /* Basic ACTabScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				974126F61F82477B00362AE5 /* BasicHeaderedACTabScrollViewController.swift */,
+			);
+			name = "Basic ACTabScrollView";
+			sourceTree = "<group>";
+		};
+		97E73B581F893946009A9A26 /* Custom Animation */ = {
+			isa = PBXGroup;
+			children = (
+				97E39DA31F83FA3000065863 /* CustomAnimationViewController.swift */,
+			);
+			name = "Custom Animation";
+			sourceTree = "<group>";
+		};
+		97E73B591F893953009A9A26 /* No Navbar example */ = {
+			isa = PBXGroup;
+			children = (
+				974126F21F82477A00362AE5 /* WithoutNavBarExample.swift */,
+			);
+			name = "No Navbar example";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

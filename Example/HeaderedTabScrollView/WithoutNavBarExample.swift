@@ -40,7 +40,7 @@ class WithoutNavBarExampleController: HeaderedACTabScrollViewController, ACTabSc
         contentViews.append(vc.view)
     }
     
-    //-MARK: ACTabScrollViewDataSource
+    // MARK: - ACTabScrollViewDataSource
     
     func numberOfPagesInTabScrollView(_ tabScrollView: ACTabScrollView) -> Int {
         return 3

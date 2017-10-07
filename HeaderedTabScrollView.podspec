@@ -35,11 +35,13 @@ A swift View-Controller managing a scrollable tab-based menu above a header. It 
 
   s.subspec 'PageMenu' do |pagemenu|
     pagemenu.dependency 'PageMenu', '~> 2.0.0'
+    pagemenu.dependency 'HeaderedTabScrollView/Base'
     pagemenu.source_files = 'HeaderedTabScrollView/Classes/HeaderedCAPSPageMenuViewController.swift'
   end
 
   s.subspec 'ACTabScrollView' do |actabscrollview|
     actabscrollview.dependency 'ACTabScrollView', '~> 0.3.0'
+    actabscrollview.dependency 'HeaderedTabScrollView/Base'
     actabscrollview.source_files = 'HeaderedTabScrollView/Classes/HeaderedACTabScrollViewController.swift'
   end
 

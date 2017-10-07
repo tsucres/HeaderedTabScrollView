@@ -24,8 +24,6 @@ class PlaceholderViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //contentText.backgroundColor = .white
-        //contentText.textColor = .black
         contentText.delegate = self
         self.view.addSubview(contentText)
         
@@ -42,7 +40,6 @@ class PlaceholderViewController: UIViewController, UITextViewDelegate {
     }
     var scrollDelegateFunc: ((UIScrollView)->Void)?
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        //parentHeaderedTabScrollViewController?.pleaseScroll(scrollView)
         if self.scrollDelegateFunc != nil {
             self.scrollDelegateFunc!(scrollView)
         }
