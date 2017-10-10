@@ -146,19 +146,25 @@ open class AbstractHeaderedTabScrollViewController: UIViewController {
         
         
         
-        setupNavBar()
+        
     }
     
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navBarOverlay?.isHidden = false
+        setupNavBar()
     }
     override open func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navBarOverlay?.isHidden = true
+        
         if let navCtrl = self.navigationController {
+            let navBar = navCtrl.navigationBar
+            navBar.setBackgroundImage(nil, for: UIBarMetrics.default)
+            navBar.shadowImage = nil
+            navBarOverlay?.removeFromSuperview()
             navCtrl.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:self.navBarItemsColor.withAlphaComponent(1)]
         }
+        
+        
     }
     private func setupNavBar() {
         if let navCtrl = self.navigationController {
@@ -166,7 +172,9 @@ open class AbstractHeaderedTabScrollViewController: UIViewController {
             // Make the navBar transparent
             navBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
             navBar.shadowImage = UIImage()
-            navBarOverlay = UIView.init(frame: CGRect.init(x: 0, y: 0, width: navBar.bounds.width, height: self.navBarOffset()))
+            if navBarOverlay == nil {
+                navBarOverlay = UIView.init(frame: CGRect.init(x: 0, y: 0, width: navBar.bounds.width, height: self.navBarOffset()))
+            }
             
             navBarOverlay!.autoresizingMask = UIViewAutoresizing.flexibleWidth
             navBar.subviews.first?.insertSubview(navBarOverlay!, at: 0)
