@@ -32,7 +32,7 @@ If you don't specify a subspec, the two versions will be installed.
 
 Don't forget to `import HeaderedTabScrollView` wherever you need it.
 
-**Note**: The [last pod release](https://github.com/PageMenu/PageMenu/releases/tag/2.0.0) of PageMenu isn't [the last version available](https://github.com/PageMenu/PageMenu/compare/2.0.0...master) on the github repo and doesn't include a [fix](https://github.com/PageMenu/PageMenu/commit/a6279a0070d79e5d28e8f1e4288ba4cef504402b) for a bug on the first subpage. If you experience this bug, you'll have to change the `CAPSPageMenu+UIConfiguration.swift` file to match [the fix](https://github.com/PageMenu/PageMenu/commit/a6279a0070d79e5d28e8f1e4288ba4cef504402b).
+**Note**: The [last pod release](https://github.com/PageMenu/PageMenu/releases/tag/2.0.0) of PageMenu isn't [the last version available](https://github.com/PageMenu/PageMenu/compare/2.0.0...master) on the github repo and doesn't include two fixes ([here](https://github.com/PageMenu/PageMenu/commit/a6279a0070d79e5d28e8f1e4288ba4cef504402b) and [here](https://github.com/PageMenu/PageMenu/commit/54182c6cf4fbffe8895c9e7535019314aa8e7e5d))  for issues [#347](https://github.com/PageMenu/PageMenu/issues/347) and [#122](https://github.com/PageMenu/PageMenu/issues/112) respectively. If you experience one of these bugs, you'll have to change the `CAPSPageMenu+UIConfiguration.swift` and `CAPSPageMenu.swift` files to match the fixes.
 
 I know it's a bit crappy to do so but it's the easiest solution I can think of :/
 

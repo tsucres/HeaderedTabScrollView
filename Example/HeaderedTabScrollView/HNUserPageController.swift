@@ -16,8 +16,6 @@ class HNUserPageController: HeaderedCAPSPageMenuViewController, CAPSPageMenuDele
     let tabsTexts = ["Submissions", "Comments", "Favorites"]
     //var tabs: [HNTabTitleView] = []
     
-    var contentViews: [UIView] = []
-    var defaultPageIndex = 0
     override func viewDidLoad() {
         self.headerHeight = 230
         super.viewDidLoad()

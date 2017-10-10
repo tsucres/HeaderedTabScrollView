@@ -45,6 +45,8 @@ class HNUserPageHeader: UIView {
     var about: String? {
         didSet {
             self.aboutLabel.text = about // TODO: Attributed Text
+            self.aboutLabel.sizeToFit()
+            self.aboutLabel.setContentOffset(CGPoint(x: 0, y: -self.aboutLabel.contentInset.top), animated: false)
         }
     }
     override init(frame: CGRect) {
