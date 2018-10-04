@@ -221,7 +221,6 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 9JMCJCA8J2;
 						LastSwiftMigration = 0900;
 					};
 				};
@@ -458,7 +457,7 @@
 			baseConfigurationReference = 44403100D35B91DDA65F9D62 /* Pods-HeaderedTabScrollView_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9JMCJCA8J2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = HeaderedTabScrollView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -474,7 +473,7 @@
 			baseConfigurationReference = 3720E81626B3E7093D6E391C /* Pods-HeaderedTabScrollView_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9JMCJCA8J2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = HeaderedTabScrollView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
