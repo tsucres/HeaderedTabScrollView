@@ -22,6 +22,10 @@ class HaDExampleViewController: HeaderedACTabScrollViewController, ACTabScrollVi
     let defaultTabIndex = 0 // First showed subpage is Description
     var contentViews: [UIView] = []
     
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let header = UserHeaderView()
@@ -51,8 +55,6 @@ class HaDExampleViewController: HeaderedACTabScrollViewController, ACTabScrollVi
         self.navBarTitleColor = UIColor.white.withAlphaComponent(0)
     }
     
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navBarItemsColor = Constants.ControlsColor
@@ -62,7 +64,7 @@ class HaDExampleViewController: HeaderedACTabScrollViewController, ACTabScrollVi
         // Add the share btn
         self.setNavBarRightItems(items: [UIBarButtonItem(barButtonSystemItem: .action, target: self, action: nil)])
         
-        UIApplication.shared.statusBarStyle = .lightContent
+        setNeedsStatusBarAppearanceUpdate()
     }
     
     /// Initialize each title for each page the project in the TabScrollView

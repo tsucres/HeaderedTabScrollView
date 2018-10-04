@@ -64,6 +64,10 @@ class HNUserPageController: HeaderedCAPSPageMenuViewController, CAPSPageMenuDele
         self.navBarItemsColor = .white
     }
     
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.setNavBarTitle(title: "Curtis' profile")
@@ -73,7 +77,7 @@ class HNUserPageController: HeaderedCAPSPageMenuViewController, CAPSPageMenuDele
         }
         
         self.navBarColor = #colorLiteral(red: 0.07159858197, green: 0.09406698495, blue: 0.1027848646, alpha: 1)
-        UIApplication.shared.statusBarStyle = .lightContent
+        setNeedsStatusBarAppearanceUpdate()
     }
     
     

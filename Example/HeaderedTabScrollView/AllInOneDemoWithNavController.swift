@@ -27,6 +27,10 @@ class DemoTableViewController: UITableViewController {
     let controllers: [UIViewController] = [BasicHeaderedACTabScrollViewController(), BasicHeaderedCAPSPageMenuViewController(), HNUserPageController(), HaDExampleViewController(), CustomAnimationViewController()]
     let cellId = "BasicCellId"
     
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .default
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -55,7 +59,7 @@ class DemoTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        UIApplication.shared.statusBarStyle = .default
+        setNeedsStatusBarAppearanceUpdate()
     }
 }
 

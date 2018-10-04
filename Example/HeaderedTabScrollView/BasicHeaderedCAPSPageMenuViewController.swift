@@ -23,6 +23,10 @@ class BasicHeaderedCAPSPageMenuViewController: HeaderedCAPSPageMenuViewControlle
     var subPageControllers: [UIViewController] = []
     var subPageTitles = ["One", "Two", "Three"]
     
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,7 +60,7 @@ class BasicHeaderedCAPSPageMenuViewController: HeaderedCAPSPageMenuViewControlle
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        UIApplication.shared.statusBarStyle = .lightContent
+        setNeedsStatusBarAppearanceUpdate()
     }
     func willMoveToPage(_ controller: UIViewController, index: Int) {
         print("Will move to page \(index)")
