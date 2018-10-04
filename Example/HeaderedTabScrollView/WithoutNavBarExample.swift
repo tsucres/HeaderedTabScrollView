@@ -13,6 +13,9 @@ import HeaderedTabScrollView
 class WithoutNavBarExampleController: HeaderedACTabScrollViewController, ACTabScrollViewDataSource {
     var contentViews: [UIView] = []
     
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +24,7 @@ class WithoutNavBarExampleController: HeaderedACTabScrollViewController, ACTabSc
         self.dataSource = self
         
         self.headerBackgroundColor = .white
-        UIApplication.shared.statusBarStyle = .default
+        setNeedsStatusBarAppearanceUpdate()
         
         for i in 0 ..< MockupData.subpagesContent.count {
             let vc = PlaceholderViewController()

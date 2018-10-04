@@ -14,6 +14,16 @@ class CustomAnimationViewController: HeaderedCAPSPageMenuViewController, CAPSPag
     var subPageControllers: [UIViewController] = []
     var subPageTitles = ["One", "Two", "Three"]
     
+    var percent:CGFloat = 0.0
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        if percent > 0.5 {
+            return .lightContent
+        } else {
+            return .default
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,9 +55,11 @@ class CustomAnimationViewController: HeaderedCAPSPageMenuViewController, CAPSPag
         
     }
     
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        UIApplication.shared.statusBarStyle = .default
+        setNeedsStatusBarAppearanceUpdate()
     }
     
     override func headerDidScroll(minY: CGFloat, maxY: CGFloat, currentY: CGFloat) {
@@ -56,19 +68,13 @@ class CustomAnimationViewController: HeaderedCAPSPageMenuViewController, CAPSPag
         updateHeaderAlphaAccordingToScrollPosition(minY: minY, maxY: maxY, currentY: currentY)
     }
     
+    
     /// Custom animation that progrssivelly changes the navBar content color from black to white
     func updateNavBarTitleColor(minY: CGFloat, maxY: CGFloat, currentY: CGFloat) {
-        let percent = (currentY - minY)/(maxY-minY)
+        percent = (currentY - minY)/(maxY-minY)
         let color = UIColor(white: percent, alpha: 1)
         self.navBarItemsColor = color
-        self.navBarTitleColor = color
-        if percent > 0.5 {
-            UIApplication.shared.statusBarStyle = .lightContent
-        } else {
-            UIApplication.shared.statusBarStyle = .default
-            
-        }
-        
+        setNeedsStatusBarAppearanceUpdate()
     }
     
     
